@@ -160,9 +160,6 @@ html, body {
 /*-------------------------------------
 	Partials - atoms
 -------------------------------------*/
-.title {
-
-}
 .toggle {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -571,17 +568,23 @@ box-shadow: none; }
   #FOOTER
 \*------------------------------------*/
 .footer {
-  background-color: #f69223;
+  background-color: #F6B562;
+  text-align: center;
   position: relative;
   overflow: hidden;
+  opacity: 0.7;
+  padding: 1em;
 }
+.footer a {
+color: #000;
+text-decoration: underline; }
 
 
 /*-------------------------------------
 	Pages
 -------------------------------------*/
 .page.page--index {
-
+  background-color: #f8efe6;
 }
 
 

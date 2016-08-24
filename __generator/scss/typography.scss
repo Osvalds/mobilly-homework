@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src:  url('../fonts/firasans-medium-webfont.woff2') format('woff2'),
+        url('../fonts/firasans-medium-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Fira Sans';
+  src:  url('../fonts/firasans-regular-webfont.woff2') format('woff2'),
+        url('../fonts/firasans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font__primary: 'Fira Sans', sans-serif;

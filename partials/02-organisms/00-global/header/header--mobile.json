@@ -1,0 +1,41 @@
+{
+  "menu": {
+    "items": [
+      {
+        "current":true,
+        "url":"javascript:void(0);",
+        "name":"Uzņēmuma komanda"
+      },
+      {
+        "current":true,
+        "url":"javascript:void(0);",
+        "name":"Pieredze"
+      },
+      {
+        "current":true,
+        "url":"javascript:void(0);",
+        "name":"Pakalpojumi"
+      },
+      {
+        "current":true,
+        "url":"javascript:void(0);",
+        "name":"Kontakti"
+      }
+    ]
+  },
+  "languages_switcher": [
+    {
+      "url":"javascript:void(0);",
+      "name":"Latviešu",
+      "current_lang": true
+    },
+    {
+      "url":"javascript:void(0);",
+      "name":"po russki"
+    },
+    {
+      "url":"javascript:void(0);",
+      "name":"Engrish"
+    }
+  ]
+}

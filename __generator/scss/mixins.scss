@@ -1,0 +1,31 @@
+/* clearfix */
+@define-mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@define-mixin outer-container $local-max-width: $max-width, $cf {
+  max-width: $local-max-width;
+
+  @if $cf >= 1 {
+    @mixin clearfix;
+  }
+}
+
+@define-mixin container $cf:1 {
+  transition: max-width .2s ease-in-out;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @mixin outer-container 94%, $cf;
+  @media (--mobileS){
+    @mixin outer-container 96%, $cf;
+  }
+  @media (--laptop){
+    @mixin outer-container 1024px, $cf;
+  }
+}

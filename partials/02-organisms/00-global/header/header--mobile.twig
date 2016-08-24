@@ -1,0 +1,46 @@
+<header class="header header--mobile"  v-bind:class="{ 'header--open': nav_open }">
+    <header class="header__bar" >
+        <div class="header__bar-wrap">
+            <div class="header__logo">
+                <a href="/">
+                    <div class="header__logo-wrap">
+                        {% include "partials/00-atoms/02-images/svg/forma2-logo.svg" %}
+                    </div>
+                    <div class="header__logo-text">{{ _t('Tagline') }}</div>
+                </a>
+            </div>
+            {% include  "partials/01-molecules/02-blocks/toggle/toggle.twig" with {
+              "class":"header__toggle"
+            } only %}
+        </div>
+    </header>
+
+    <div class="header__nav-wrapper" style="background-image: url({{ TimberImage(settings.mobile_nav_background).src('medium') }})">
+        <nav class="header__nav">
+            <ul class="header__nav-items">
+                {% for item in menu.items %}
+                    <li class="header__nav-item {% if item.current %} header__nav-item--active {% endif %}">
+                        <a href="{{ item.url }}" class="header__link">
+                            {{ item.name }}
+                        </a>
+
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <nav class="header__lang">
+            <ul>
+                {% for language in languages_switcher %}
+                    <li>
+                        {% if language.current_lang %}
+                            <a href="{{ language.url }}"
+                               class="header__lang-item header__lang-item--active">{{ language.name }}</a>
+                        {% else %}
+                            <a href="{{ language.url }}" class="header__lang-item">{{ language.name }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,34 @@
+@custom-media --mobileS (min-width: 320px);
+@custom-media --mobileM (min-width: 375px);
+@custom-media --mobileL (min-width: 425px);
+@custom-media --tabletS (min-width: 600px);
+@custom-media --tablet (min-width: 768px);
+@custom-media --laptop (min-width: 1024px);
+@custom-media --4k (min-width: 2560px);
+
+/* -------------- Examples -------------- */
+
+@media (--mobileS) {
+	/* styles for small mobile viewport (min-width: 320px)*/
+}
+@media (--mobileM){
+	/* styles for snormal mobile viewport (min-width: 375px)*/
+}
+@media (--mobileL){
+	/* styles for normal mobile viewport (min-width: 425px)*/
+}
+@media (--tabletS){
+  /* styles for tablet viewport (min-width: 600px)*/
+}
+@media (--tablet){
+	/* styles for tablet viewport (min-width: 768px)*/
+}
+@media (--laptop){
+	/* styles for laptop viewport (min-width: 1024px)*/
+}
+@media (--4k){
+	/* styles for 4k viewport (min-width: 2560px)*/
+}
+
+/* change gutter width depends to design*/
+@lost gutter 6px;

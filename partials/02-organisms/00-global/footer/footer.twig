@@ -1,0 +1,38 @@
+<footer class="footer">
+    <div class="footer__flex-wrap">
+        <div class="footer__logo-wrap">
+            <div class="footer__logo">
+                {% include "partials/00-atoms/02-images/svg/forma2-logo--foooter.svg" %}
+            </div>
+        </div>
+        <div class="footer__iso">
+            <img src="{{ get_theme_url() }}/assets/images/svg/iso_certificate.svg" alt="iso sertifikāta logo">
+        </div>
+    </div>
+
+    <div class="footer__wrap">
+        <section class="footer__contact">
+            <p class="footer__cta">
+                {{_t('Contact')}}
+            </p>
+            {% for person in settings.contact_person %}
+                <div class="footer__person-wrap">
+                    <div class="footer__person">{{ person.post_title }}</div>
+                    <div class="footer__phone"><a href="tel:{{ person.phone }}" class="link link--no-fs">{{ person.phone }}</a></div>
+                    <div class="footer__info"><a href="mailto:{{ person.email }}" class="link">{{ person.email }}</a></div>
+                    <div class="footer__info"><a href="{{on_map}}" class="link">{{ address }}</a></div>
+                </div>
+            {% endfor %}
+            <a href="{{ contacts_url }}" class="button button--icon">{{_t('View all contacts')}}</a>
+        </section>
+
+        <section class="footer__requisites" v-bind:class=" { 'footer__requisites--open': requisites_open } ">
+            <div class="footer__cta footer__cta--requisites" @click="requisites_open = !requisites_open" >
+                {{_t('Requisites')}}
+            </div>
+            <div class="footer__requisites-wrap">
+                {{ settings.requisites }}
+            </div>
+        </section>
+    </div>
+</footer>

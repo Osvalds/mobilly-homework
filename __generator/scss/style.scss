@@ -1,0 +1,49 @@
+/*
+
+  88b           d88             88          88 88 88
+  888b         d888             88          "" 88 88
+  88`8b       d8'88             88             88 88
+  88 `8b     d8' 88  ,adPPYba,  88,dPPYba,  88 88 88 8b       d8
+  88  `8b   d8'  88 a8"     "8a 88P'    "8a 88 88 88 `8b     d8'
+  88   `8b d8'   88 8b       d8 88       d8 88 88 88  `8b   d8'
+  88    `888'    88 "8a,   ,a8" 88b,   ,a8" 88 88 88   `8b,d8'
+  88     `8'     88  `"YbbdP"'  8Y"Ybbd8"'  88 88 88     Y88'
+                                                         d8'
+                                                        d8'
+*/
+/*-------------------------------------
+	Base
+-------------------------------------*/
+@import "reset.scss";
+@import "typography.scss";
+@import "base.scss";
+@import "colors.scss";
+@import "mixins.scss";
+@import "grid-settings.scss";
+
+/*-------------------------------------
+	Partials - atoms
+-------------------------------------*/
+@import "../../partials/00-atoms/01-text/titles/title.scss";
+@import "../../partials/00-atoms/03-buttons/toggle/toggle.scss";
+/*-------------------------------------
+	Partials - molecules
+-------------------------------------*/
+@import "../../partials/01-molecules/02-blocks/parking-card/parking-card.scss";
+
+/*-------------------------------------
+	Partials - organisms
+-------------------------------------*/
+@import "../../partials/02-organisms/00-global/header/header.scss";
+@import "../../partials/02-organisms/00-global/footer/footer.scss";
+
+
+/*-------------------------------------
+	Pages
+-------------------------------------*/
+@import "../../partials/03-pages/index.scss";
+
+/*-------------------------------------
+	Shame file aka custom.css
+-------------------------------------*/
+/*@import "shame.scss";*/

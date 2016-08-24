@@ -1,0 +1,18 @@
+@import "header--mobile.scss";
+@import "header--desktop.scss";
+
+.header.header--mobile {
+  display: block;
+}
+.header.header--desktop {
+  display: none;
+}
+
+@media(--laptop) {
+  .header.header--mobile {
+    display: none;
+  }
+  .header.header--desktop {
+    display: flex;
+  }
+}

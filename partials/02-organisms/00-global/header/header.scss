@@ -1,18 +1,103 @@
-@import "header--mobile.scss";
-@import "header--desktop.scss";
-
-.header.header--mobile {
-  display: block;
-}
-.header.header--desktop {
-  display: none;
-}
-
-@media(--laptop) {
-  .header.header--mobile {
-    display: none;
+.header {
+  &__bar-wrap {
+    background-color: $color__primary;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+    position: relative;
+    z-index: 2;
   }
-  .header.header--desktop {
+
+  &__bar {
+    @mixin container 0;
+
     display: flex;
+    height: 56px;
+    padding: 12px 0;
+    position: relative;
+    transition: 0.2s linear;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__balance {
+    background-color: $color__secondary;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    padding: 9px 10px 10px;
+  }
+
+  &__nav {
+    background-color: $color__primary;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in;
+    width: 100%;
+    z-index: 1;
+    lost-utility: clearfix;
+  }
+
+  &__nav-wrapper {
+    padding: 28px 0;
+    @mixin container;
+  }
+
+  &__nav-item {
+    margin-bottom: 20px;
+    lost-column: 1/3;
+  }
+
+  &__link {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+
+    figure {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      max-width: 80px;
+      position: relative;
+
+      & > div {
+        background-color: $color__secondary;
+        border-radius: 200px;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+        width: 100%;
+      }
+
+      img {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+      }
+
+      figcaption {
+        margin-top: 14px;
+      }
+    }
+
+  }
+
+  @media(--tabletS) {
+    &__nav-item {
+      margin-bottom: 0;
+      text-align: center;
+      lost-column: 1/5;
+    }
+  }
+}
+
+.header--open {
+  .header__bar {
+    box-shadow: none;
+  }
+
+  .header__nav {
+    transform: translateX(0);
   }
 }

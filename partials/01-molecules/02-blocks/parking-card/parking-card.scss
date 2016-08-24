@@ -1,3 +1,58 @@
 .parking-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  display: flex;
+  line-height: 1.2;
+  padding: 18px 12px 18px 46px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
 
+  &__zone {
+    background-color: $color__text--primary;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 24px;
+    left: 10px;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+  }
+
+  &__title {
+    color: $color__text--secondary
+  }
+
+  &__distance {
+    color: $color__text--alert;
+    display: flex;
+    font-weight: 600;
+    margin-left: @padding-left;
+    min-width: 70px;
+    padding-left: 10px;
+    position: relative;
+    text-align: right;
+    justify-content: inherit;
+    align-items: center;
+
+    &::before {
+      background-color: $color__partial--divider;
+      content: '';
+      height: 25px;
+      left: -10px;
+      width: 1px;
+    }
+  }
+
+  &--active {
+    .parking-card__title {
+      color: $color__text--primary;
+      font-weight: 600;
+    }
+  }
 }

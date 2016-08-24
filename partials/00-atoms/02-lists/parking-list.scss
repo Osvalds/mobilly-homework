@@ -1,0 +1,30 @@
+.parking-list {
+  lost-utility: clearfix 0;
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @media(--tabletS) {
+    lost-flex-container: row;
+
+    &__item {
+      lost-column: 1/2;
+
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media(--laptop) {
+    &__item {
+      lost-column: 1/3;
+    }
+  }
+}

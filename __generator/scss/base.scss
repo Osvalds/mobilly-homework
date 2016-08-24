@@ -33,6 +33,16 @@ html, body {
 .page__main {
   flex: 1 0 auto;
 }
+
+.page__footer {
+  flex: 1 0 auto;
+}
+
+@media(--tabletS) {
+  .page__footer {
+    flex: none;
+  }
+}
 /*sticky footer end*/
 
 .header-is-open {

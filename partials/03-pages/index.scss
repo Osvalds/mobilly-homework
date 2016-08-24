@@ -4,5 +4,8 @@
 
 
 .page--index .page {
-
+  &__content {
+    @mixin container;
+    padding-bottom: 56px;
+  }
 }

@@ -15,7 +15,7 @@
 
 <body class="page page--index">
 <div class="page__main" role="main">
-    <header class="header header--mobile" id="js-header-mobile">
+    <header class="header" id="js-header-mobile">
         <div class="header__bar-wrap">
             <header class="header__bar">
                 <div class="header__toggle toggle" id="js-toggle">
@@ -32,17 +32,14 @@
                         <img src="assets/svg/mobilly_logo.svg" alt="Mobilly logo" class="toggle__logo">
                     </div>
                 </div>
-
                 <div class="header__balance">
                     14.38€
                 </div>
-
             </header>
         </div>
 
         <nav class="header__nav">
             <div class="header__nav-wrapper">
-
                 <ul class="header__nav-items">
                     <li class="header__nav-item">
                         <a href="javascript:void(0);" class="header__link">
@@ -50,8 +47,8 @@
                                 <div>
                                     <img src="assets/svg/icons/car.svg" alt="car svg">
                                 </div>
-                                <figcaption>Autostāvvietas</figcaption>
                             </figure>
+                            Autostāvvietas
                         </a>
                     </li>
                     <li class="header__nav-item">
@@ -60,8 +57,8 @@
                                 <div>
                                     <img src="assets/svg/icons/train.svg" alt="car svg">
                                 </div>
-                                <figcaption>Vilcieni</figcaption>
                             </figure>
+                            Vilcieni
                         </a>
                     </li>
                     <li class="header__nav-item">
@@ -70,8 +67,8 @@
                                 <div>
                                     <img src="assets/svg/icons/bus.svg" alt="bus svg">
                                 </div>
-                                <figcaption>Autobusi</figcaption>
                             </figure>
+                            Autobusi
                         </a>
                     </li>
                     <li class="header__nav-item">
@@ -80,8 +77,8 @@
                                 <div>
                                     <img src="assets/svg/icons/taxi.svg" alt="taxi svg">
                                 </div>
-                                <figcaption>Taksometri</figcaption>
                             </figure>
+                            Taksometri
                         </a>
                     </li>
                     <li class="header__nav-item">
@@ -90,15 +87,48 @@
                                 <div>
                                     <img src="assets/svg/icons/user.svg" alt="user svg">
                                 </div>
-                                <figcaption>Lietotājs</figcaption>
                             </figure>
+                            Lietotājs
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
+    <div class="page__content">
+        <h2 class="page__label label">Tuvākās zonas(+-65M)</h2>
+        <ul class="parking-list">
+            <li class="parking-list__item parking-card parking-card--active">
+                <span class="parking-card__zone">TU</span>
+                <h4 class="parking-card__title">Europark biznesa augstskolā Turība</h4>
+                <div class="parking-card__distance">~900m</div>
+            </li>
+            <li class="parking-list__item parking-card parking-card--active">
+                <span class="parking-card__zone">CS</span>
+                <h4 class="parking-card__title">Citypark stāvvieta Bauskas ielā 88</h4>
+                <div class="parking-card__distance">~2km</div>
+            </li>
+        </ul>
+        <h2 class="page__label label">Zonas</h2>
+        <ul class="parking-list">
+            <li class="parking-list__item parking-card">
+                <span class="parking-card__zone">A</span>
+                <h4 class="parking-card__title">Rīgas satiksmes autostāvvieta</h4>
+            </li>
+            <li class="parking-list__item parking-card">
+                <span class="parking-card__zone">B</span>
+                <h4 class="parking-card__title">Rīgas satiksmes autostāvvieta</h4>
+            </li>
+            <li class="parking-list__item parking-card">
+                <span class="parking-card__zone">C</span>
+                <h4 class="parking-card__title">Rīgas satiksmes autostāvvieta</h4>
+            </li>
+            <li class="parking-list__item parking-card">
+                <span class="parking-card__zone">D</span>
+                <h4 class="parking-card__title">Rīgas satiksmes autostāvvieta</h4>
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="page__footer footer">
     <small>Viss pirmkods ir pieejams manā <a href="https://github.com/Osvalds/mobilly-homework">Github'ā</a></small>

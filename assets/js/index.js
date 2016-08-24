@@ -1,5 +1,7 @@
 (function () {
 
+    // No need for jquery dependency.
+
     var header  = {
         toggle : document.getElementById('js-toggle'),
         header: document.getElementById('js-header-mobile'),
@@ -22,12 +24,10 @@
         open_header: function () {
             this.toggle.classList.add('toggle--close');
             this.header.classList.add('header--open');
-
         },
         close_header:function () {
             this.toggle.classList.remove('toggle--close');
             this.header.classList.remove('header--open');
-
         }
     };
 
